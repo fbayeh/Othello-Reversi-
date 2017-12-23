@@ -7,9 +7,9 @@ public class Othello extends JFrame
 		  // class of each cells in the board
 		  static class Cell extends JPanel
 		  {
-			  int x_index; 						// x-index of the cell in the board
-			  int y_index; 						// y-index of the cell in the board
-			  int state;						// State of the cells which shows whether the cell is a) blank b) taken by player 1 c) taken by player 2
+			  int x_index; 				// x-index of the cell in the board
+			  int y_index; 				// y-index of the cell in the board
+			  int state;				// State of the cells which shows whether the cell is a) blank b) taken by player 1 c) taken by player 2
 			  private Image backgroundImage;	// Background image of cell which shows its state
 			  
 			  public Cell ()
@@ -43,15 +43,15 @@ public class Othello extends JFrame
 		  
 		  // The board weight which AI algorithm use for decision making
 		  private static final int[][] boardWeight = {{70,  1, 35, 30, 30, 35,  1, 70},
-			   										  { 1,  1, 25, 25, 25, 25,  1,  1},
-			   										  {35, 25, 30, 26, 26, 30, 25, 35},
-			   										  {30, 25, 26, 25, 25, 26, 25, 30},
-			   										  {30, 25, 26, 25, 25, 26, 25, 30},
-			   										  {35, 25, 30, 26, 26, 30, 25, 35},
-			   										  { 1,  1, 25, 25, 25, 25,  1,  1},
-			   										  {70,  1, 35, 30, 30, 35,  1, 70}};
+			   				      { 1,  1, 25, 25, 25, 25,  1,  1},
+			   				      {35, 25, 30, 26, 26, 30, 25, 35},
+			   				      {30, 25, 26, 25, 25, 26, 25, 30},
+			   				      {30, 25, 26, 25, 25, 26, 25, 30},
+			   				      {35, 25, 30, 26, 26, 30, 25, 35},
+			   				      { 1,  1, 25, 25, 25, 25,  1,  1},
+			   				      {70,  1, 35, 30, 30, 35,  1, 70}};
 		  
-		  // keeps the current state of game
+	      // keeps the current state of game
 	      public static Cell[][] cells = new Cell[8][8];
 	      
 	      public static int[] playerMove =  new int[2];
@@ -78,10 +78,10 @@ public class Othello extends JFrame
 	      public Othello()
 
 	      {
-	    	  int[] playersCount = new int[2];				// Keeps the number of cells each player has taken
+	    	  int[] playersCount = new int[2];			// Keeps the number of cells each player has taken
 	    	  double secondPlayerWins = 0, playersEqual=0;
 	    	  boolean[] IsGameInProgress = {true,true};		// Shows whether game is progressing without problem for both players
-	    	  int turnOfGame = 0;							// For passing the game between two players
+	    	  int turnOfGame = 0;					// For passing the game between two players
 	    	  
 	    	  
 	    	  //initializing the cells
@@ -660,3 +660,4 @@ public class Othello extends JFrame
 	    	  }
 	    	  return true;
 	      }
+}
